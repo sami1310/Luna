@@ -15,20 +15,26 @@ app.post('/Luna',(req, res) => {
        //console.log(req.body)
        const lat = req.body.latitude
        const lng = req.body.longitude
-       //console.log(lat)
-       //console.log(lng)
+
+       const latString = lat.toString()
+       const lngString = lng.toString()
+       const coma = ","
+       const lanLng = latString.concat(coma,lngString)
+         //const latlng = req.body
+       console.log(typeof lanLng)
+       console.log(lanLng)
 
        var options = {
         method: 'GET',
         url: 'https://weatherapi-com.p.rapidapi.com/astronomy.json',
-        params: {q: lat,lng},
+        params: {q: lanLng},
         headers: {
           'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
           'x-rapidapi-key': RAPID_API_KEY
         }
       }
 
-      axios.request(options).then(data => res.json(data.data.astronomy)).catch(function (error) {
+      axios.request(options).then(data => res.json(data.data)).catch(function (error) {
         console.error(error);
       })
        /*axios({
