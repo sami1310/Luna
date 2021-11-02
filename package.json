@@ -1,0 +1,28 @@
+{
+  "name": "luna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sami1310/Luna.git"
+  },
+  "author": "sami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sami1310/Luna/issues"
+  },
+  "homepage": "https://github.com/sami1310/Luna#readme",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "express": "^4.17.1",
+    "unirest": "^0.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13"
+  }
+}
